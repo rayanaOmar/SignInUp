@@ -38,9 +38,9 @@ class SignUp : AppCompatActivity() {
 
             //show the user information in details page
             val intent = Intent(this, Details::class.java)
-            intent.putExtra("Name", name)
-            intent.putExtra("Mobile", mobile)
-            intent.putExtra("Location", location)
+            intent.putExtra("name", name)
+            intent.putExtra("mobile", mobile)
+            intent.putExtra("location", location)
             startActivity(intent)
         }
     }

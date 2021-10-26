@@ -21,9 +21,9 @@ class Details : AppCompatActivity() {
         infoTextView = findViewById(R.id.infoTextView)
         signOutBtn = findViewById(R.id.singOutBtn)
 
-        val name = intent.getStringExtra("Name")
-        val mobile = intent.getStringExtra("Mobile")
-        val location = intent.getStringExtra("Location")
+        val name = intent.getStringExtra("name")
+        val mobile = intent.getStringExtra("mobile")
+        val location = intent.getStringExtra("location")
 
         dearTextView.text = "Dear $mobile member"
         infoTextView.text = "Name: $name \nLocation: $location"

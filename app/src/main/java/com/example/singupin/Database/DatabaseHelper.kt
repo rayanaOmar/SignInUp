@@ -24,10 +24,10 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(
     fun saveUserInfo(name: String, mobile: String, location: String, password: String){
         val contentValue = ContentValues()
 
-        contentValue.put("Name", name)
-        contentValue.put("Mobile", mobile)
-        contentValue.put("Location", location)
-        contentValue.put("Password", password)
+        contentValue.put("name", name)
+        contentValue.put("mobile", mobile)
+        contentValue.put("location", location)
+        contentValue.put("password", password)
 
         database.insert("users", null, contentValue)
 
@@ -43,9 +43,9 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(
 
         c.moveToFirst()
         val user: Users
-        val saveMobile = c.getString(c.getColumnIndex("Mobile"))
+        val saveMobile = c.getString(c.getColumnIndex("mobile"))
         if(saveMobile == mobile){
-            val saveLocation = c.getString(c.getColumnIndex("Location"))
+            val saveLocation = c.getString(c.getColumnIndex("location"))
             user = Users(name, mobile, saveLocation)
             return user
         }else{
